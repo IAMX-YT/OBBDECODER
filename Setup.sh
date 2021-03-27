@@ -34,9 +34,15 @@ pkg install qemu-user-i386 -y
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/quickbms
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/IAMX  -O /data/data/com.termux/files/home/IAMX.bms
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/License  -O /data/data/com.termux/files/home/License
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE  -O /data/data/com.termux/files/home/DECODE
+chmod 777 /data/data/com.termux/files/home/DECODE
 
 toilet -f term -F gay "Complete"
-sleep 3
+sleep 2
+toilet -f term -F gay "NEXT TIME USE THIS COMMAND"
+sleep 1
+toilet -f term -F gay "./DECODE   and press Enter"
+sleep 1
 toilet -f term -F gay "Script Starting...."
 #START OBB DECODER SCRIPT
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE.sh)
