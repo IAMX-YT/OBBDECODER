@@ -41,7 +41,7 @@ toilet -f term -F gay "Complete"
 sleep 2
 toilet -f term -F gay "NEXT TIME USE THIS COMMAND"
 sleep 1
-toilet -f term -F gay "./DECODE   and press Enter"
+toilet -f term -F gay "sh DECODE.sh   and press Enter"
 sleep 1
 toilet -f term -F gay "Script Starting...."
 #START OBB DECODER SCRIPT
