@@ -24,8 +24,8 @@ echo "Work Is Finished"
 DECODERPATH="/data/data/com.termux/files/home/XDECODER"
 
 #----------------------------------------------------------------------------------------------------------------------
-StartScript()
-{
+function StartScript{
+
 mpv $DECODERPATH/XDECODER/License
 toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f term -F gay "welcome To OBB DEASSEMBLER"

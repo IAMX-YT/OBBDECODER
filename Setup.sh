@@ -19,8 +19,7 @@ termux-setup-storage
 apt update && apt upgrade
 gem install lolcat
 
-Nextstep()
-{
+function Nextstep{
 #SOME OTHER PERMISSION && LOCATIONS
 DECODERPATH="/data/data/com.termux/files/home/XDECODER"
 
@@ -44,7 +43,7 @@ bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECOD
 #Checking Required Pakcages
 echo -e "Checking Required packages"
 
-packages=( "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+packages=( "mpv" "pv" "toilet" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
 
 for pkg in ${packages[@]}; do
 
@@ -52,9 +51,9 @@ for pkg in ${packages[@]}; do
 
     if [ "${is_pkg_installed}" == "install ok installed" ]; then
         echo -e ${pkg} is installed.
-        Nextstep                        
+        Nextstep                       
     else [ "" = "${is_pkg_installed}" ];
      echo -e "No ${pkg}. Setting up ${pkg}." 
     pkg install ${pkg} -y
-        Nextstep                        
+       Nextstep                        
     fi
