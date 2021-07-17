@@ -18,24 +18,34 @@ termux-setup-storage
 #REFRESH TERMUX
 apt update && apt upgrade
 
-#INSTALL PACKAGES
-Pkg install git -y
-gem install lolcat
-pkg install toilet
-apt install toilet -y
-apt install pv
-pkg install mpv -y
-apt install wget -y
-pkg install x11-repo -y
-pkg install qemu-system-i386 -y
-pkg install qemu-user-i386 -y
+#Checking Required Pakcages
+echo -e "Checking Required packages"
+
+packages=( "lolcat" "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+
+for pkg in ${packages[@]}; do
+
+    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
+
+    if [ "${is_pkg_installed}" == "install ok installed" ]; then
+        echo -e ${pkg} is installed.
+        Nextstep                        
+    else [ "" = "${is_pkg_installed}" ];
+     echo -e "No ${pkg}. Setting up ${pkg}." 
+    pkg install ${pkg} -y
+        Nextstep                        
+    fi
+
+Nextstep()
+{
+#SOME OTHER PERMISSION && LOCATIONS
+DECODERPATH="/data/data/com.termux/files/home/XDECODER"
 
 #DOWNLOAD TOOLS
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/quickbms
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/IAMX  -O /data/data/com.termux/files/home/IAMX.bms
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/License  -O /data/data/com.termux/files/home/License
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE  -O /data/data/com.termux/files/home/DECODE
-chmod 777 /data/data/com.termux/files/home/DECODE
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O $DECODERPATH/quickbms
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/IAMX  -O $DECODERPATH/IAMX.bms
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/License  -O $DECODERPATH/License
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/UpdateVersion  -O $DECODERPATH/UpdateVersion
 
 toilet -f term -F gay "Complete"
 sleep 2
@@ -46,3 +56,4 @@ sleep 1
 toilet -f term -F gay "Script Starting...."
 #START OBB DECODER SCRIPT
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE.sh)
+}
