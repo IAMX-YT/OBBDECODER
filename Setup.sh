@@ -20,7 +20,6 @@ apt update && apt upgrade
 gem install lolcat
 
 function Nextstep{
-#SOME OTHER PERMISSION && LOCATIONS
 
 #DOWNLOAD TOOLS
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/XDECODER/quickbms
@@ -40,9 +39,15 @@ bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECOD
 }
 
 #Checking Required Pakcages
-echo -e "Checking Required packages"
+echo -e "Installing... Required packages"
+apt install wget -y
+apt install toilet -y
+pkg install wget
+pkg install mpv -y
+pkg install toilet
+pkg install pv
 
-packages=( "mpv" "pv" "toilet" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+packages=( "wget" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
 
 for pkg in ${packages[@]}; do
 
