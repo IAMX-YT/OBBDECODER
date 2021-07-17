@@ -21,7 +21,6 @@ gem install lolcat
 
 function Nextstep{
 #SOME OTHER PERMISSION && LOCATIONS
-DECODERPATH=
 
 #DOWNLOAD TOOLS
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/XDECODER/quickbms

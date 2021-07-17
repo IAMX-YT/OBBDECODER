@@ -21,7 +21,7 @@ echo ""
 echo "Work Is Finished"  
 
 #SOME OTHER PERMISSION && LOCATIONS
-DECODERPATH="/data/data/com.termux/files/home/XDECODER"
+DECODERPATH=/data/data/com.termux/files/home/XDECODER
 
 #----------------------------------------------------------------------------------------------------------------------
 function StartScript{
