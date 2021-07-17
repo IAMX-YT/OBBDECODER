@@ -17,6 +17,7 @@ termux-setup-storage
 
 #REFRESH TERMUX
 apt update && apt upgrade
+gem install lolcat
 
 Nextstep()
 {
@@ -43,7 +44,7 @@ bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECOD
 #Checking Required Pakcages
 echo -e "Checking Required packages"
 
-packages=( "lolcat" "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+packages=( "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
 
 for pkg in ${packages[@]}; do
 
