@@ -18,24 +18,6 @@ termux-setup-storage
 #REFRESH TERMUX
 apt update && apt upgrade
 
-#Checking Required Pakcages
-echo -e "Checking Required packages"
-
-packages=( "lolcat" "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
-
-for pkg in ${packages[@]}; do
-
-    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
-
-    if [ "${is_pkg_installed}" == "install ok installed" ]; then
-        echo -e ${pkg} is installed.
-        Nextstep                        
-    else [ "" = "${is_pkg_installed}" ];
-     echo -e "No ${pkg}. Setting up ${pkg}." 
-    pkg install ${pkg} -y
-        Nextstep                        
-    fi
-
 Nextstep()
 {
 #SOME OTHER PERMISSION && LOCATIONS
@@ -57,3 +39,21 @@ toilet -f term -F gay "Script Starting...."
 #START OBB DECODER SCRIPT
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE.sh)
 }
+
+#Checking Required Pakcages
+echo -e "Checking Required packages"
+
+packages=( "lolcat" "mpv" "pv" "toilet" "git" "wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+
+for pkg in ${packages[@]}; do
+
+    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
+
+    if [ "${is_pkg_installed}" == "install ok installed" ]; then
+        echo -e ${pkg} is installed.
+        Nextstep                        
+    else [ "" = "${is_pkg_installed}" ];
+     echo -e "No ${pkg}. Setting up ${pkg}." 
+    pkg install ${pkg} -y
+        Nextstep                        
+    fi
