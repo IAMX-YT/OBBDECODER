@@ -21,13 +21,13 @@ gem install lolcat
 
 function Nextstep{
 #SOME OTHER PERMISSION && LOCATIONS
-DECODERPATH=/data/data/com.termux/files/home/XDECODER
+DECODERPATH=
 
 #DOWNLOAD TOOLS
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O $DECODERPATH/quickbms
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/IAMX  -O $DECODERPATH/IAMX.bms
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/License  -O $DECODERPATH/License
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/UpdateVersion  -O $DECODERPATH/UpdateVersion
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/XDECODER/quickbms
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/IAMX  -O /data/data/com.termux/files/home/XDECODER/IAMX.bms
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/License  -O /data/data/com.termux/files/home/XDECODER/License
+wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/UpdateVersion  -O /data/data/com.termux/files/home/XDECODER/UpdateVersion
 
 toilet -f term -F gay "Complete"
 sleep 2
