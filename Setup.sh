@@ -20,6 +20,9 @@ apt update && apt upgrade
 gem install lolcat
 
 function Nextstep{
+#Removed Old files
+rm -rf /data/data/com.termux/files/home/XDECODER
+mkdir /data/data/com.termux/files/home/XDECODER
 
 #DOWNLOAD TOOLS
 wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/XDECODER  -O /data/data/com.termux/files/home/XDECODER/quickbms
@@ -46,18 +49,8 @@ pkg install wget
 pkg install mpv -y
 pkg install toilet
 pkg install pv
-
-packages=( "wget" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
-
-for pkg in ${packages[@]}; do
-
-    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
-
-    if [ "${is_pkg_installed}" == "install ok installed" ]; then
-        echo -e ${pkg} is installed.
-        Nextstep                       
-    else [ "" = "${is_pkg_installed}" ];
-     echo -e "No ${pkg}. Setting up ${pkg}." 
-    pkg install ${pkg} -y
-       Nextstep                        
-    fi
+pkg install curl
+pkg install x11-repo
+pkg install qemu-system-i386
+pkg install qemu-user-i386
+Nextstep
