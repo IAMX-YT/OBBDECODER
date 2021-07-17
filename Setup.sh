@@ -19,9 +19,25 @@ termux-setup-storage
 apt update && apt upgrade
 gem install lolcat
 
-function Nextstep{
-#Removed Old files
-rm /data/data/com.termux/files/home/XDECODER
+#Checking Required Pakcages
+echo -e "Installing... Required packages"
+apt install wget -y
+apt install toilet -y
+pkg install wget
+pkg install mpv -y
+pkg install toilet
+pkg install pv
+pkg install curl
+pkg install x11-repo
+pkg install qemu-system-i386
+pkg install qemu-user-i386
+
+# Remove existing files
+if
+[ -e /data/data/com.termux/files/home/XDECODER ]
+then
+rm -rf /data/data/com.termux/files/home/XDECODER
+fi
 mkdir /data/data/com.termux/files/home/XDECODER
 
 #DOWNLOAD TOOLS
@@ -39,18 +55,3 @@ sleep 1
 toilet -f term -F gay "Script Starting...."
 #START OBB DECODER SCRIPT
 bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/DECODE.sh)
-}
-
-#Checking Required Pakcages
-echo -e "Installing... Required packages"
-apt install wget -y
-apt install toilet -y
-pkg install wget
-pkg install mpv -y
-pkg install toilet
-pkg install pv
-pkg install curl
-pkg install x11-repo
-pkg install qemu-system-i386
-pkg install qemu-user-i386
-Nextstep
