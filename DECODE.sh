@@ -10,7 +10,7 @@
 #echo "Version : $verl"
 #if [[ $verl == 1.1 ]]; then
 #echo "Tool Working On latest version $verl"
-#StartScript
+StartScript
 #  else 
 
 #echo " [ Update Available ] "
