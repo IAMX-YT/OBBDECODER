@@ -23,7 +23,6 @@ StartScript
 #----------------------------------------------------------------------------------------------------------------------
 function StartScript{
 
-mpv /data/data/com.termux/files/home/XDECODER/XDECODER/License
 toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f term -F gay "welcome To OBB DEASSEMBLER"
 sleep 1
@@ -171,3 +170,4 @@ echo "Work Is Finished"
       
 #----------------------------------------------------------------------------------------------------------------------
 }
+done
