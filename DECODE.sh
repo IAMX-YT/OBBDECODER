@@ -23,7 +23,6 @@ StartScript
 #----------------------------------------------------------------------------------------------------------------------
 #function StartScript{
 toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
-toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f term -F gay "welcome To OBB DEASSEMBLER"
 sleep 1
 echo ""
@@ -35,7 +34,7 @@ echo ""
 sleep 2
 toilet "FIRST SUBSCRIBE OUR YOUTUBE CHANNEL IAMX " -f term -F border --gay | pv -qL 350
 sleep 0.5
-am start -a android.intent.action.VIEW -d https://www.youtube.com/channel/UC_-mj2Hc-eP7aP_fk9fsa_w
+am start -a android.intent.action.VIEW -d https://youtube.com/channel/UCTfMOuj0-Z_zmFoSR7ZEE7A
 toilet -f term -F gay "PLEASE WAIT.............."
 sleep 6
 echo ""
