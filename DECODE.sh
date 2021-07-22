@@ -21,8 +21,8 @@ StartScript
 #echo "Work Is Finished"  
 
 #----------------------------------------------------------------------------------------------------------------------
-function StartScript{
-
+#function StartScript{
+toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f term -F gay "welcome To OBB DEASSEMBLER"
 sleep 1
@@ -169,5 +169,5 @@ echo "Work Is Finished"
       echo -e "PAK NOT FOUND.
       
 #----------------------------------------------------------------------------------------------------------------------
-}
+#}
 done
