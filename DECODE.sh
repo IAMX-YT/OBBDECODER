@@ -5,28 +5,25 @@
 ############################################
 
 #Cheking Update available or not
-wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/UpdateVersion  -O DECODERPATH/XDECODER/UpdateVersion
-verl = open("UpdateVersion", '1.1').read()
-echo "Version : $verl"
-if [[ $verl == 1.1 ]]; then
-echo "Tool Working On latest version $verl"
-StartScript
-  else 
+#wget https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/UpdateVersion  -O /data/data/com.termux/files/home/XDECODER/XDECODER/UpdateVersion
+#verl = open("UpdateVersion", '1.1').read()
+#echo "Version : $verl"
+#if [[ $verl == 1.1 ]]; then
+#echo "Tool Working On latest version $verl"
+#StartScript
+#  else 
 
-echo " [ Update Available ] "
-sleep 0.3
-echo " [ Updating Start.... ] "
-bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/Setup.sh)
-echo ""
-echo "Work Is Finished"  
-
-#SOME OTHER PERMISSION && LOCATIONS
-DECODERPATH=/data/data/com.termux/files/home/XDECODER
+#echo " [ Update Available ] "
+#sleep 0.3
+#echo " [ Updating Start.... ] "
+#bash <(curl -s https://raw.githubusercontent.com/IAMX-YT/OBBDECODER/master/Setup.sh)
+#echo ""
+#echo "Work Is Finished"  
 
 #----------------------------------------------------------------------------------------------------------------------
 function StartScript{
 
-mpv $DECODERPATH/XDECODER/License
+mpv /data/data/com.termux/files/home/XDECODER/XDECODER/License
 toilet -f mono12 -F gay -t 'XDEC' | lolcat -a -d 1
 toilet -f term -F gay "welcome To OBB DEASSEMBLER"
 sleep 1
@@ -47,10 +44,10 @@ echo ""
 #----------------------------------------------------------------------------------------------------------------------
 
 #SET EXECUTION PERMISSIONS
-chmod 777 $DECODERPATH/quickbms
-chmod 777 $DECODERPATH/IAMX.bms
-chmod +x $DECODERPATH/quickbms
-chmod +x $DECODERPATH/IAMX.bms
+chmod 777 /data/data/com.termux/files/home/XDECODER/quickbms
+chmod 777 /data/data/com.termux/files/home/XDECODER/IAMX.bms
+chmod +x /data/data/com.termux/files/home/XDECODER/quickbms
+chmod +x /data/data/com.termux/files/home/XDECODER/IAMX.bms
 
 #----------------------------------------------------------------------------------------------------------------------
 
@@ -103,7 +100,7 @@ read PAKPATH
 2FILE=$PAKPATH
   if [ -f "$2FILE" ]; then
       echo -e "Wait 3 Second...."
-      mv $PAKPATH $DECODERPATH/
+      mv $PAKPATH /data/data/com.termux/files/home/XDECODER/
 toilet -f term -F gay "STEP 1 DONE"
 echo ""
 sleep 2
@@ -126,7 +123,7 @@ echo ""
 sleep 1
 toilet -f term -F gay "Because Pak File Is Too Long"
 echo ""
-qemu-i386 $DECODERPATH/quickbms -Q IAMX.bms $PAKNAME $DECFOLDER
+qemu-i386 /data/data/com.termux/files/home/XDECODER/quickbms -Q IAMX.bms $PAKNAME $DECFOLDER
 echo "Work Is Finished"
   else 
       echo -e "PAK NOT FOUND."
@@ -167,7 +164,7 @@ sleep 1
 toilet -f term -F gay "It Will Take Some time"
 toilet -f term -F gay "if pak file is long"
 echo ""
-qemu-i386 $DECODERPATH/quickbms -w -r -r IAMX.bms $PAKNAME $DECFOLDER
+qemu-i386 /data/data/com.termux/files/home/XDECODER/quickbms -w -r -r IAMX.bms $PAKNAME $DECFOLDER
 echo "Work Is Finished"
   else 
       echo -e "PAK NOT FOUND.
